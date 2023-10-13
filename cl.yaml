@@ -10,5 +10,5 @@ storage:
     - path: /etc/hostname
       mode: 0644
       contents:
-        inline: ${HOSTNAME}
+        inline: HOSTNAME
         
