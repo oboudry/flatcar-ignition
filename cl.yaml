@@ -5,3 +5,10 @@ passwd:
     - name: core
       ssh_authorized_keys:
         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqYGL8TvOZSEfSVQ37bMYf60iWo7IcztEQjUHCh/pXSdlkn7bXey1zHmCRypff9t0GYY0Y51pJIfEMjNSEy1SM9nAh7u6Aqqj8bFmiW/CDWCxAQDnukVZL3BOyHwtK1g+J+a1I661qJsY6JPReeFlDvrs8ZmAuFw4C1hM7UyJR8qZM+xVij4E290/q61NVsXcmjpYE0MQP8MQr47NSlXDCYtGrOm7EaK/7Sq7RIVRhth18XyZYm/jPXEa8coM4TM+a97FofyJk75M6rz4+wagXnl8AY2FiXH6teiOhTE9XwF08BWLgpe68778+hE76i670+IG/AzHvgQzLOC3E5O+2dtuqJED5HTOlHcWzwCMLNmRQht6MaESwCvgY403uW4mr+/yh3NVh4WaK2fPVfVycGSmpS8ra5lGPHt84icwmF+7djWwmeQ+V7nS5YaRNT1J06CCIaYPMdk0eVhcre79ep2kbjcodbvOQ+DOHGt54p6E1Ade8QCDUDuTAtEbWxYk= intranet-mvp\antoine.humair@MVP-WKSCH-0106
+storage:
+  files:
+    - path: /etc/hostname
+      mode: 0644
+      contents:
+        inline: ${HOSTNAME}
+        
