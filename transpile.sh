@@ -5,4 +5,4 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-sed -e "s/HOSTNAME/$1/" ./cl.yaml | docker run --rm -i quay.io/coreos/butane:latest
+sed -e "s/HOSTNAME/$1/" $(dirname "$0")/cl.yaml | docker run --rm -i quay.io/coreos/butane:latest
