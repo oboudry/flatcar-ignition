@@ -11,9 +11,9 @@ storage:
       mode: 0644
       contents:
         inline: HOSTNAME
-networkd:
-  units:
-  - name: 00-eno1.network
+storage:
+  files:
+  - path: /etc/systemd/networkd/00-eno1.network
     contents: |-
       [Match]
       Name=eno1
