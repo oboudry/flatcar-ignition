@@ -2,6 +2,7 @@
 
 if [ -z "$1" ]; then
     echo "Veuillez fournir le nom du serveur comme argument."
+    echo 'example: $> bash transpile.sh flatcar01 > ignition.json'
     exit 1
 fi
 
