@@ -11,13 +11,11 @@ storage:
       mode: 0644
       contents:
         inline: HOSTNAME
-storage:
-  files:
-  - path: /etc/systemd/networkd/00-eno1.network
-    contents: |-
-      [Match]
-      Name=eno1
-
-      [Network]
-      DHCP=true
-      ClientIdentifier=mac
+    - path: /etc/systemd/networkd/00-eno1.network
+      contents: |-
+        [Match]
+        Name=eno1
+  
+        [Network]
+        DHCP=true
+        ClientIdentifier=mac
