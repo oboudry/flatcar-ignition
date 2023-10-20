@@ -11,11 +11,11 @@ storage:
       mode: 0644
       contents:
         inline: HOSTNAME
-    - path: /etc/systemd/networkd/00-eno1.network
+    - path: /etc/systemd/networkd/00-eth0.network
       contents:
         inline: |
           [Match]
-          Name=eno1
+          Name=eth0
     
           [Network]
           DHCP=true
