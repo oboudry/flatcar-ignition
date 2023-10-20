@@ -12,10 +12,11 @@ storage:
       contents:
         inline: HOSTNAME
     - path: /etc/systemd/networkd/00-eno1.network
-      contents: |-
-        [Match]
-        Name=eno1
-  
-        [Network]
-        DHCP=true
-        ClientIdentifier=mac
+      contents:
+        inline: |
+          [Match]
+          Name=eno1
+    
+          [Network]
+          DHCP=true
+          ClientIdentifier=mac
