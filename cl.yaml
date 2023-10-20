@@ -1,5 +1,5 @@
 variant: flatcar
-version: 1.0.0
+version: 2.0.0
 passwd:
   users:
     - name: core
@@ -11,4 +11,13 @@ storage:
       mode: 0644
       contents:
         inline: HOSTNAME
-        
+networkd:
+  units:
+  - name: 00-eno1.network
+    contents: |-
+      [Match]
+      Name=eno1
+
+      [Network]
+      DHCP=true
+      ClientIdentifier=mac
