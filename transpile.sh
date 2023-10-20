@@ -6,4 +6,4 @@ if [ -z "$1" -o -z "$2" ]; then
     exit 1
 fi
 
-sed -e "s/HOSTNAME/$1/" -e "s/IPADDRESS/$2" $(dirname "$0")/cl.yaml | docker run --rm -i quay.io/coreos/butane:latest
+sed -e "s/HOSTNAME/$1/" -e "s/IPADDRESS/$2/" $(dirname "$0")/cl.yaml | docker run --rm -i quay.io/coreos/butane:latest
