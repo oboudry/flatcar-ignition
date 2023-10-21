@@ -4,21 +4,20 @@ passwd:
   users:
     - name: core
       ssh_authorized_keys:
-        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqYGL8TvOZSEfSVQ37bMYf60iWo7IcztEQjUHCh/pXSdlkn7bXey1zHmCRypff9t0GYY0Y51pJIfEMjNSEy1SM9nAh7u6Aqqj8bFmiW/CDWCxAQDnukVZL3BOyHwtK1g+J+a1I661qJsY6JPReeFlDvrs8ZmAuFw4C1hM7UyJR8qZM+xVij4E290/q61NVsXcmjpYE0MQP8MQr47NSlXDCYtGrOm7EaK/7Sq7RIVRhth18XyZYm/jPXEa8coM4TM+a97FofyJk75M6rz4+wagXnl8AY2FiXH6teiOhTE9XwF08BWLgpe68778+hE76i670+IG/AzHvgQzLOC3E5O+2dtuqJED5HTOlHcWzwCMLNmRQht6MaESwCvgY403uW4mr+/yh3NVh4WaK2fPVfVycGSmpS8ra5lGPHt84icwmF+7djWwmeQ+V7nS5YaRNT1J06CCIaYPMdk0eVhcre79ep2kbjcodbvOQ+DOHGt54p6E1Ade8QCDUDuTAtEbWxYk= intranet-mvp\antoine.humair@MVP-WKSCH-0106
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCpMzH04r10n9uJv7+paegzHHXQHV5/4HoZg0X3iJTXnSa8/gtpha9SoItMJER4tNUo8RhQYgkyXqYh/rh+aBBCZ732kTSoJ+xhsH1wZbd/2UOoKN1OWQfXI0TWVhT9OiU5MaY3kRdmO4P7MUSAtlK6RUv9e7z4tA0YbaAx65GcKPEK7EYmbQFDPtxh+8BxOOICFptdeavO9maaY8CZBnpzU/DL2GMvfvSMO61XnmEijHO3DEs+dDVBIaL/W97Fy9lQP+JCMZEnlyHdicntoJ0lFJ2QvHmOUf3ZKuHT5gER6Oc893o4GVj0B3fCVQRNuEvVUKtd23RKCrZWEtDrsRz7uq147KcmCUTUsQzD3hklWfiuE9txAKILS2VCn1man5vHQWLt/jjnGeO8wiQQoQwIZ1dSsmW9XNAog7lls46wZZL1Q1Gj7aox2AlJiTBRdl28dUTgb34/Qld/ovvamNhoYVPnwti8S/HW6TSOhnJ9Oiwu5DBhD9VsSt4kRuAIDiM= laptop@laptop-HP-EliteBook-840-G3
 storage:
   files:
     - path: /etc/hostname
       mode: 0644
       contents:
         inline: HOSTNAME
-    - path: /etc/systemd/networkd/00-eth0.network
+    - path: /etc/systemd/networkd/00-enp0s3.network
       contents:
         inline: |
           [Match]
-          Name=eth0
+          Name=enp0s3
     
           [Network]
-          DNS=192.168.77.13
-          DNS=192.168.77.11
+          DNS=10.0.2.3
           Address=IPADDRESS/24
-          Gateway=192.168.77.10
+          Gateway=10.0.2.2
